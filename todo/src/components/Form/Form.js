@@ -1,15 +1,14 @@
 import React from 'react'
-import s from './Header.module.css'
 
-function Header({submit_form}) {
+function Form({ submit_form }) {
 
 
     return (
-        <div className={s.header_wrapper}>
+        <div>
             <form onSubmit={submit_form}>
-                <div className={s.input_section}>
-                    <div className={s.select_section}>
-                        <div className={s.select_day}>
+                <div>
+                    <div>
+                        <div>
                             <select name='day' required>
                                 <option value=''>Выберите день</option>
                                 <option value='0'>ПН</option>
@@ -21,7 +20,7 @@ function Header({submit_form}) {
                                 <option value='6'>ВС</option>
                             </select>
                         </div>
-                        <div className={s.select_importance}>
+                        <div>
                             <select name='importance' required>
                                 <option value=''>Выберите важность</option>
                                 <option value='1'>Важно</option>
@@ -30,7 +29,7 @@ function Header({submit_form}) {
                         </div>
 
                     </div>
-                    <input type='text' name='description' placeholder='Описание' required/>
+                    <input type='text' name='description' placeholder='Описание' required />
                 </div>
                 <button type='submit'>Добавить</button>
             </form>
@@ -38,4 +37,4 @@ function Header({submit_form}) {
     )
 }
 
-export default Header
+export default Form
